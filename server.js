@@ -1,12 +1,12 @@
 import express from 'express';
 import SohaHelper from './core/index.js';
 import * as fs from 'fs';
-
 const port = 3000;
 let soha = new SohaHelper();
 var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
+
 app.all('*', function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
@@ -14,7 +14,7 @@ app.all('*', function(req, res, next) {
     if (req.method == 'OPTIONS') {
         res.status(200).end()
     } else {
-        next()
+        next();
     }
 })
 app.post('/api/filter-subject', async(req, res) => {
