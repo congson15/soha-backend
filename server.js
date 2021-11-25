@@ -1,8 +1,7 @@
 import express from 'express';
 import SohaHelper from './core/index.js';
 import * as fs from 'fs';
-const port = process.env.PORT;
-const host = process.env.HOST;
+const port = process.env.PORT || 3000;
 let soha = new SohaHelper();
 var app = express();
 app.use(express.urlencoded({ extended: true }));
