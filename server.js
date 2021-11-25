@@ -50,6 +50,6 @@ app.get('/my-log', (req, res) => {
     }
 });
 
-app.listen(port, hostname,function() {
+app.listen(port,function() {
     console.log("Server is running on " + port + " port");
 });
