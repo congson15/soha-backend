@@ -17,6 +17,7 @@ app.all('*', function(req, res, next) {
         next();
     }
 })
+app.get("/",(req,res)=> res.send("OK"));
 app.post('/api/filter-subject', async(req, res) => {
     let subject = req.body.subject;
     let cookie = req.body.cookie;
