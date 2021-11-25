@@ -1,7 +1,8 @@
 import express from 'express';
 import SohaHelper from './core/index.js';
 import * as fs from 'fs';
-const port = 3000;
+const port = process.env.PORT;
+const host = process.env.HOST;
 let soha = new SohaHelper();
 var app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -50,6 +51,6 @@ app.get('/my-log', (req, res) => {
     }
 });
 
-app.listen(port, function() {
+app.listen(port, hostname,function() {
     console.log("Server is running on " + port + " port");
 });
