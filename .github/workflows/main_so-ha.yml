@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'so-ha'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_18118766744C401AA4109361CCEC18B1 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5C112E4CBFC545C88B9772441410C68A }}
           package: .
